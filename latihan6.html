@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 6 - Bilangan Prima</title>
+</head>
+<body>
+    <script>
+        angka = Number(window.prompt("Masukkan angka"));
+
+        document.write("Bilangan prima dari 1 sampai " + angka + ":<br>");
+
+        for(i=2; i<= angka; i++){
+            if(isPrima(i)){
+                document.write(i + " ");
+            }
+        }
+
+        function isPrima(n){
+            if(n < 2){
+                return false;
+            }
+            for(j=2; j<n; j++){
+                if(n % j === 0){
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

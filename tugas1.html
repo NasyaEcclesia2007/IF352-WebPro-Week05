@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latihan 1 - Grade</title>
+</head>
+<body>
+    <h2>Menentukan Grade</h2>
+
+    <script>
+        nilai = Number(window.prompt("Nilai"));
+
+        function getGrade(nilai) {
+            if(nilai > 100){
+                return "Error";
+            }else if(nilai >= 85 && nilai <=100) {
+                return "A";
+            } else if(nilai >= 80){
+                return "A-";
+            } else if(nilai >= 75){
+                return "B+";
+            } else if(nilai >= 70) {
+                return "B";
+            } else if(nilai >= 65){
+                return "B-";
+            } else if(nilai >= 60){
+                return "C+";
+            } else if(nilai >= 55){
+                return "C";
+            }
+            else if(nilai >= 45){
+                return "D";
+            } else if(nilai >= 0 && nilai < 45){
+                return "E";
+            } else{
+                return "F";
+            }
+        }
+
+        document.write("Nilai: " + nilai + "<br>");
+        document.write("Grade: " + getGrade(nilai));
+
+    </script>
+</body>
+</html>

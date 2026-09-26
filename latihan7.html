@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 7 - Grafik Kehadiran</title>
+</head>
+<body>
+    <script>
+        var hariList = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"];
+        var jumlahHadir = [];
+
+        for(i=0; i<hariList.length; i++){
+            jumlahHadir[i] = Number(window.prompt("Jumlah mahasiswa masuk hari " + hariList[i]));
+        }
+
+        document.write("<h3>Grafik Jumlah Kehadiran Mahasiswa</h3>");
+
+        for(i=0; i<hariList.length; i++){
+            document.write(hariList[i] + ": " + buatBar(jumlahHadir[i]) + "<br>");
+        }
+
+        function buatBar(jumlah){
+            var bar = "";
+            for(j=1; j<=jumlah;j++){
+                bar += "x";
+            }
+            return bar;
+        }
+    </script>
+</body>
+</html>
